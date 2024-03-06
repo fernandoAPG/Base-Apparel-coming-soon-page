@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+:root {
+  /*primary*/
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Soft-Red: hsl(0, 93%, 68%);
+  /*Neutral*/
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+  /*Gradients*/
+
+  --Linear-1: 35deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
+  --Linear-2: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
+
+  /*font-weight* 300,400,600*/
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+body {
+  background-image: url(images/bg-pattern-desktop.svg);
+}
+.all {
+  display: flex;
+  justify-content: space-between;
+}
+.main-image {
+  height: 46.5rem;
+  width: auto;
+}
+.container {
+  width: 28rem;
+  margin-top: 5rem;
+  margin-left: 10rem;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container p {
+  color: var(--Desaturated-Red);
+}
+.container .form {
+    display: flex;
+}
+.container .text h1,
+p,
+input {
+  margin: 1rem 0;
+}
+.container span {
+  color: var(--Desaturated-Red);
+  font-weight: 300;
+}
+.container h1 {
+  font-weight: 400;
+  font-size: 4rem;
+  letter-spacing: 1rem;
+  color: var(--Dark-Grayish-Red);
+}
+.container p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.container .text input {
+  padding: 1.5rem;
+  border-color: hsl(0, 6%, 24%,0.4);
+  width: 100%;
+  border-radius: 2rem;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+}
+.form {
+    position: relative;
+}
+.form button{
+    padding: 1.5rem 3rem;
+    margin: 1rem 0;
+    background-image: linear-gradient(var(--Linear-2));
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+::placeholder{
+    color: hsl(0, 6%, 24%,0.4);
+}
+.form button:hover{
+    opacity: 0.7;
+}
+#valid{
+    justify-self: flex-start;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.titles {
+    margin-bottom: 2.5rem;
+}
+#icon-error{
+    width: 2rem;
+    position: absolute;
+    top: 2rem;
+    bottom: 2rem;
+    left: 19rem;
+    display: none;
+}
+@media only screen and (max-width: 500px){
+    .all{
+        flex-direction: column;
+        width: 500px;
+        height: auto;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    .main-image{
+        width: 100%;
+        height: 12rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
